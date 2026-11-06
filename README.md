@@ -1,4 +1,4 @@
-# 🎂 Cumplidora
+#Cumplidora
 
 🇪🇸 [Leer en Español](./README.es.md)
 
