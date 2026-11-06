@@ -1,0 +1,14 @@
+[Unit]
+Description=Cumplidora - Sincronización y avisos de cumpleaños
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 {{CUMPLIDORA_SCRIPT}} check
+Restart=on-failure
+RestartSec=45
+StandardOutput=journal
+StandardError=journal

@@ -1,0 +1,8 @@
+{
+  "telegram_bot_token": "PEGAR_AQUI_EL_TOKEN_DE_BOTFATHER",
+  "telegram_chat_id": "PEGAR_AQUI_TU_CHAT_ID",
+  "google_sheet_csv_url": "https://docs.google.com/spreadsheets/d/e/.../pub?output=csv",
+  "allowed_email": "",
+  "default_notify_days": [0, 1, 7],
+  "catchup_missed_days": 3
+}

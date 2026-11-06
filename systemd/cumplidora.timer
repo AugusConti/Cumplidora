@@ -1,0 +1,14 @@
+[Unit]
+Description=Timer diario de Cumplidora (recordatorios de cumpleaños)
+
+[Timer]
+# Ejecuta 45s después de iniciar sesión (da tiempo a que conecte el Wi-Fi)
+OnStartupSec=45s
+# Y revisa a las 09:00 y 18:00 todos los días (con Persistent=true por si estaba apagada)
+OnCalendar=*-*-* 09:00:00
+OnCalendar=*-*-* 18:00:00
+Persistent=true
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target

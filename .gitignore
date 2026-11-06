@@ -1,0 +1,20 @@
+# Configuración privada y tokens (mantiene config.example.json versionado)
+config*.json
+!config.example.json
+.env
+.env.*
+
+# Datos y estado de cumpleaños (locales y caché de Google Sheets)
+data/
+*.csv
+
+# Temporales, backups y entornos de Python / IDEs
+*.tmp
+*.bak
+*.swp
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vscode/
+.idea/
