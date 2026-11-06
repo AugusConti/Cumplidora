@@ -43,9 +43,15 @@ Ejecutá el asistente interactivo:
 python3 cumplidora.py setup
 ```
 
-El asistente detecta automáticamente tu `chat_id` de Telegram, te envía un mensaje de bienvenida, guarda `config.json` con permisos privados (`0600`) y activa el timer de `systemd --user`.
+El asistente te pedirá tu Token de bot de Telegram y la URL del Google Sheets. Una vez enviaste el /start del bot en Telegram, apreta enter y se detecta automáticamente tu `chat_id` de Telegram, te envía un mensaje de bienvenida, guarda `config.json` y activa el timer de `systemd --user`.
 
 ---
+
+## Uso cotidiano
+
+La aplicación checkea 2 veces al día (A las 9hs y a las 18hs) si hay que recordar de algún cumpleaños. Si la pc está apagada en ese horario, la próxima vez que se prenda, ejecutará el script para checkear si hay que hacer algún recordatorio.
+
+Agregá, modificá o borrá cumpleaños a través del Google Forms y estate atento a las notificaciones de telegram para disfrutar de tu recordatorio de cumpleaños.
 
 ## Comandos disponibles
 
@@ -78,7 +84,7 @@ journalctl --user -u cumplidora.service -n 30
 ## Edición, baja y seguridad opcional
 * **Editar un cumpleaños desde el celular:** volvé a enviar el formulario con el **mismo nombre**; prevalece la fila más reciente.
 * **Eliminar un cumpleaños:** enviá el formulario con ese nombre y escribí `BORRAR` en **Notas** (o eliminá la fila en Google Sheets).
-* **Restringir envíos a tu cuenta de Google (opcional):** en Google Forms activá *Configuración → Respuestas → Recopilar direcciones de correo electrónico (Verificadas)* y agregá tu correo en `"allowed_email"` dentro de `config.json`.
+* **Restringir envíos a tu cuenta de Google (opcional):** en Google Forms activá *Configuración → Respuestas → Recopilar direcciones de correo electrónico (Verificadas)* y agregá tu correo en `"allowed_email":"tu_email@example.com"` dentro de `config.json`.
 
 ## Tests
 
